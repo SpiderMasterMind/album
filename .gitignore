@@ -1,0 +1,13 @@
+.env
+env-example
+
+album/.bundle
+album/log/*
+album/tmp/*
+
+album/tmp/pids/*
+!album/tmp/pids/
+!album/tmp/pids/.keep
+album/public/assets
+album/config/master.key
+album/node_modules

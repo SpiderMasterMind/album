@@ -1,0 +1,6 @@
+.git
+.dockerignore
+.env
+album/node_modules/
+album/vendor/bundle/
+album/tmp/
