@@ -5,7 +5,7 @@ services:
   postgres:
     image: postgres:14.2
     env_file:
-      - .env
+      - ./.env
     environment:
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
@@ -30,10 +30,16 @@ services:
     links:
       - postgres
       - redis
+      - chrome-server
     ports:
       - '3000:3000'
     env_file:
-      - .env
+      - ./.env
+
+  chrome-server:
+    image: selenium/standalone-chrome:96.0
+    ports:
+      - "4444:4444"
 
 volumes:
   album-postgres:

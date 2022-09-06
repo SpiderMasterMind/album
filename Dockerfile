@@ -1,6 +1,8 @@
 # Dockerfile development version
 FROM ruby:3.1.2 AS album-development
 
+ENV CHROMIUM_DRIVER_VERSION 2.46
+
 # Install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg -o /root/yarn-pubkey.gpg && apt-key add /root/yarn-pubkey.gpg
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
