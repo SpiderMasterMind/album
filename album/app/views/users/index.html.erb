@@ -1,1 +1,12 @@
-Ben Stacey
+<h2>Current Users</h3>
+
+<% @users.each do |user| %>
+  <ul>
+    <li>
+      <%= user.first_name%> <%= user.last_name %>
+      <br/>
+      Created at: <%= user.created_at %>
+      Updated at: <%= user.updated_at %>
+    </li>
+  </ul>
+<% end %>
