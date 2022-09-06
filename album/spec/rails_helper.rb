@@ -69,6 +69,8 @@ RSpec.configure do |config|
       url: "http://chrome-server:4444"
     }
   end
+
+  config.include FactoryBot::Syntax::Methods
 end
 
 Capybara.server_host = "0.0.0.0"
